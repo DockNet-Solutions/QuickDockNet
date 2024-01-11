@@ -10,9 +10,9 @@ services:
       - "80:80"
     depends_on:
       - db
-    environment:
-      PHP_EXTENSION_PDO: 1
-      PHP_EXTENSION_MAIL: 1
+    build:
+      context: .
+      dockerfile: Dockerfile
 
   db:
     image: mysql:latest
@@ -20,10 +20,10 @@ services:
     volumes:
       - db_data:/var/lib/mysql
     environment:
-      MYSQL_ROOT_PASSWORD: rootpassword
-      MYSQL_DATABASE: mydatabase
+      MYSQL_ROOT_PASSWORD: 39451418
+      MYSQL_DATABASE: docknet
       MYSQL_USER: user
-      MYSQL_PASSWORD: userpassword
+      MYSQL_PASSWORD: 14183945
     ports:
       - "3306:3306"
 
@@ -32,7 +32,7 @@ services:
     container_name: phpmyadmin
     environment:
       PMA_HOST: db
-      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_ROOT_PASSWORD: 39451418
     ports:
       - '8080:80'
     depends_on:
