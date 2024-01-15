@@ -34,10 +34,10 @@
             <strong class="pwd">Password</strong>
             <input class="input-form-login" type="password" placeholder="password">
             <div class="buttons-form-login">
-                <button class="overlay__btn__login overlay__btn--colors">
+                <button class="overlay__btn__1 overlay__btn--colors">
                     <span>Login</span>
                 </button>
-                <button onClick="window.location.href='/register';" class="overlay__btn__register overlay__btn--colors">
+                <button onClick="window.location.href='/register';" class="overlay__btn__2 overlay__btn--colors">
                     <span>Register</span>
                 </button>
             </div>

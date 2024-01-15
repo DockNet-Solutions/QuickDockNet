@@ -93,6 +93,7 @@ strong {
 
 hr {
     margin: 1rem;
+    border: 1px solid black;
 }
 
 .text-gradient {
@@ -118,7 +119,7 @@ hr {
     display: flex;
 }
 
-.overlay__btn__login {
+.overlay__btn__1 {
     width: 48%;
     height: 2.5rem;
     display: flex;
@@ -134,7 +135,7 @@ hr {
     outline-color: hsl(var(--hue), 95%, 50%);
 }
 
-.overlay__btn__register {
+.overlay__btn__2 {
     width: 48%;
     height: 2.5rem;
     display: flex;
@@ -149,12 +150,12 @@ hr {
     outline-color: hsl(var(--hue), 95%, 50%);
 }
 
-.overlay__btn__login:hover {
+.overlay__btn__1:hover {
     transform: scale(1.05);
     cursor: pointer;
 }
 
-.overlay__btn__register:hover {
+.overlay__btn__2:hover {
     transform: scale(1.05);
     cursor: pointer;
 }
