@@ -3,6 +3,9 @@
 use modele\jsonState;
 use modele\bdd;
 
+var_dump($_POST);
+exit();
+
 if(!(isset($_POST['password']) & isset($_POST['email']) & isset($_POST['pseudo']))) {
     jsonState::returnNotif("error", "Erreur", "Une erreur interne est survenue.");
     return;
@@ -13,13 +16,15 @@ if(strlen($_POST['password']) < 12) {
     return;
 }
 
-if(!preg_match('/[0-9A-Z]/', $str)) {
+$_POST['pseudo'] = htmlspecialchars($_POST['pseudo']);
+$_POST['email'] = htmlspecialchars($_POST['email']);
+
+
+if(!preg_match('/[0-9A-Z]/', $_POST['password'])) {
     jsonState::returnNotif("error", "Erreur", "Le mot de passe doit contenir un chiffre et une majuscule !");
     return;
 }
 
-$_POST['pseudo'] = htmlspecialchars($_POST['pseudo']);
-$_POST['email'] = htmlspecialchars($_POST['email']);
 
 $bdd = bdd::getBdd();
 
@@ -41,7 +46,7 @@ if(isset($info) && !empty($info)) {
     jsonState::returnNotif("error", "Erreur", "Un compte ces identifiants existe déjà.");
 } else { 
     $req = $bdd->prepare("INSERT INTO users (pseudo, email, password, joinDate) VALUES (:pseudo, :email, :password, :joinDate)");
-    $req->execute(array("pseudo" => $_POST['pseudo'], "email" => $_POST['email'], "password" => password_hash($_POST['password'], PASSWORD_DEFAULT), "joinDate" => time());
+    $req->execute(array("pseudo" => $_POST['pseudo'], "email" => $_POST['email'], "password" => password_hash($_POST['password'], PASSWORD_DEFAULT), "joinDate" => time()));
     
     $req = $this->bdd->prepare("SELECT * FROM users WHERE pseudo=:pseudo");
     $req->execute(array("pseudo" => $_POST['pseudo']));
@@ -50,6 +55,6 @@ if(isset($info) && !empty($info)) {
         
     
     jsonState::returnNotif("success", "Enregistrement réussie !", "Bienvenue sur Docknet !");
-    jsonState::returnJson("refresh", true);
+    jsonState::returnJson("goUrl", "/login");
 }
 ?>

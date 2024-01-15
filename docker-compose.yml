@@ -17,13 +17,14 @@ services:
   db:
     image: mysql:latest
     container_name: mysql-db
+    restart: always
     volumes:
       - db_data:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: 39451418
       MYSQL_DATABASE: docknet
       MYSQL_USER: user
-      MYSQL_PASSWORD: 14183945
+      MYSQL_PASSWORD: 39451418
     ports:
       - "3306:3306"
 
