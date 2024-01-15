@@ -3,15 +3,13 @@
 use modele\jsonState;
 use modele\bdd;
 
-var_dump($_POST);
-exit();
 
 if(!(isset($_POST['password']) & isset($_POST['email']) & isset($_POST['pseudo']))) {
     jsonState::returnNotif("error", "Erreur", "Une erreur interne est survenue.");
     return;
 }
 
-if(strlen($_POST['password']) < 12) {
+if(strlen($_POST['password']) < 6) {
     jsonState::returnNotif("error", "Erreur", "Le mot de passe doit faire plus de 6 caractères !");
     return;
 }
@@ -48,9 +46,9 @@ if(isset($info) && !empty($info)) {
     $req = $bdd->prepare("INSERT INTO users (pseudo, email, password, joinDate) VALUES (:pseudo, :email, :password, :joinDate)");
     $req->execute(array("pseudo" => $_POST['pseudo'], "email" => $_POST['email'], "password" => password_hash($_POST['password'], PASSWORD_DEFAULT), "joinDate" => time()));
     
-    $req = $this->bdd->prepare("SELECT * FROM users WHERE pseudo=:pseudo");
+    $req = $bdd->prepare("SELECT * FROM users WHERE pseudo=:pseudo");
     $req->execute(array("pseudo" => $_POST['pseudo']));
-    $_SESSION['User'] = $this->info = $req->fetch(PDO::FETCH_ASSOC);
+    $_SESSION['User'] = $req->fetch(PDO::FETCH_ASSOC);
     $_SESSION['User']['temp'] = time();
         
     
