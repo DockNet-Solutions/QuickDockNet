@@ -32,7 +32,9 @@
         </script>
     </head>
     <body>
-        <?php 
+        <?php
+        var_dump($_GET["page"]);
+        exit();
             if(isset($_GET["page"])) {
                 switch($_GET["page"]) {
                     case 'login':
@@ -40,6 +42,9 @@
                         break;
                     case 'register':
                         include("pages/register.php");
+                        break;
+                    case 'accueil':
+                        include("pages/accueil.php");
                         break;
                     default:
                         include("pages/404.php");

@@ -36,7 +36,7 @@
             <input id="reg-password" maxlength="64" class="input-form-login" type="password" placeholder="password">
             <input id="reg-password2" maxlength="64" class="input-form-login" type="password" placeholder="re-type password">
             <div class="buttons-form-login">
-                <button onClick="window.location.href='/login';" class="overlay__btn__2 overlay__btn--colors">
+                <button onclick="window.location.href='/login';" class="overlay__btn__2 overlay__btn--colors">
                     <span>Login</span>
                 </button>
                 <button onclick="sendRegister()" class="overlay__btn__1 overlay__btn--colors">
