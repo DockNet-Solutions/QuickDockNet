@@ -2,6 +2,7 @@
 
 use modele\jsonState;
 use modele\bdd;
+use modele\Mail;
 
 
 if(!(isset($_POST['password']) & isset($_POST['email']) & isset($_POST['pseudo']))) {
@@ -55,6 +56,11 @@ if(isset($info) && !empty($info)) {
     $req->execute(array("pseudo" => $_POST['pseudo']));
     $_SESSION['User'] = $req->fetch(PDO::FETCH_ASSOC);
     $_SESSION['User']['temp'] = time();
+
+    Mail::sendMail("Welcome ".$_SESSION['pseudo']." to DockNet !",
+        Mail::build("Welcome to DockNet !",
+            "Thanks for joining us !"),
+        $_SESSION['email'], $_SESSION['pseudo']);
         
     
     jsonState::returnNotif("success", "Registration successful!", "Welcome to Docknet!");

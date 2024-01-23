@@ -33,6 +33,13 @@
     </head>
     <body>
         <?php
+        use modele\Mail;
+        echo Mail::sendMail("Welcome guedesite to DockNet !",
+            Mail::build("Welcome to DockNet !",
+                "Thanks for joining us !"),
+            "guedesite77@gmail.com", "guedesite");
+
+        exit();
             if(isset($_GET["page"])) {
                 switch($_GET["page"]) {
                     case 'login':
