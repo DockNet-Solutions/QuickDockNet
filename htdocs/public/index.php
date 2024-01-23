@@ -45,6 +45,9 @@
                     case 'accueil':
                         include("pages/accueil.php");
                         break;
+                    case 'forgotPwd':
+                        include("pages/forgotPwd.php");
+                        break;
                     default:
                         include("pages/404.php");
                         break;

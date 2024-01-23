@@ -23,15 +23,9 @@
                 Protecting your data and securing your connection are at the heart of our commitment. We're proud to support you in your quest for a <strong>safe and serene online experience.</strong> Welcome to an era where the security of your connection is
                 <strong>our top priority...</strong>
             </p>
-            <div class="buttons-form-login">
-                <button onclick="sendLogin();" class="overlay__btn__1 overlay__btn--colors">
-                    <span>Login</span>
-                </button>
-                <button onclick="window.location.href='/register';" class="overlay__btn__2 overlay__btn--colors">
-                    <span>Register</span>
-                </button>
-            </div>
         </div>
+        
+        
 
         <div class="login-div">
             <h1 class="overlay__title login-header">Login to your account</h1>
@@ -41,8 +35,13 @@
             <input class="input-form-login" maxlength="64" id="log-identifiant" type=text placeholder="email or username">
             <strong class="pwd">Password</strong>
             <input class="input-form-login" maxlength="64" id="log-password" type="password" placeholder="password">
-            <div class="buttons-form-login btn__forgotpwd">
-                <a href='/forgotPwd'>Forgot your password ?</a>
+            <div class="buttons-form-login">
+                <button onclick="sendLogin();" class="overlay__btn__1 overlay__btn--colors">
+                    <span>Login</span>
+                </button>
+                <button onclick="window.location.href='/register';" class="overlay__btn__2 overlay__btn--colors">
+                    <span>Register</span>
+                </button>
             </div>
             </form>
         </div>

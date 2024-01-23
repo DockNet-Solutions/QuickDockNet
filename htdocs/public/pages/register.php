@@ -21,6 +21,15 @@
                 The security of your information is our top priority. When you register on our site, rest assured that <strong>your passwords are fully encrypted</strong> in our database.
                 We use <strong>advanced encryption techniques</strong> to ensure that your information remains confidential and secure.
             </p>
+            <div class="buttons-form-login">
+                <button onclick="window.location.href='/login';" class="overlay__btn__2 overlay__btn--colors">
+                    <span>Login</span>
+                </button>
+                <button onclick="sendRegister()" class="overlay__btn__1 overlay__btn--colors">
+                    <span>Register</span>
+                </button>
+                </form>
+            </div>
         </div>
 
         <div class="login-div">
@@ -35,15 +44,6 @@
             <strong class="pwd">Password</strong>
             <input id="reg-password" maxlength="64" class="input-form-login" type="password" placeholder="password">
             <input id="reg-password2" maxlength="64" class="input-form-login" type="password" placeholder="re-type password">
-            <div class="buttons-form-login">
-                <button onclick="window.location.href='/login';" class="overlay__btn__2 overlay__btn--colors">
-                    <span>Login</span>
-                </button>
-                <button onclick="sendRegister()" class="overlay__btn__1 overlay__btn--colors">
-                    <span>Register</span>
-                </button>
-            </div>
-            </form>
         </div>
     </div>
 
