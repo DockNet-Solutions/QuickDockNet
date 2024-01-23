@@ -42,11 +42,14 @@
                     case 'register':
                         include("pages/register.php");
                         break;
-                    case 'accueil':
+                    case 'home':
                         include("pages/accueil.php");
                         break;
                     case 'forgotPwd':
                         include("pages/forgotPwd.php");
+                        break;
+                    case 'changePwd':
+                        include("pages/changePwd.php");
                         break;
                     default:
                         include("pages/404.php");

@@ -38,7 +38,7 @@ if(isset($info) && !empty($info)) {
 
 
                 jsonState::returnNotif("success", "Login successful!", "Welcome back " . $d['pseudo'] . "!");
-                jsonState::returnJson("goUrl", "/accueil");
+                jsonState::returnJson("goUrl", "/home");
             }
             $flag = true;
             break;

@@ -4,4 +4,9 @@ if(!isset($_SESSION['User'])) { // if not connected
 }
 ?>
 
-<h1>Accueil</h1>
+<div class="accueil">
+    <h1>Home</h1>
+    <button onclick="window.location.href='/changePwd';" class="overlay__btn__2 overlay__btn--colors resetpwd">
+        <span>Change Password</span>
+    </button>
+</div>

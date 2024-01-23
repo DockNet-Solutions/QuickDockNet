@@ -26,10 +26,10 @@
                     <span>Login</span>
                 </button>
                 <button onclick="sendRegister()" class="overlay__btn__1 overlay__btn--colors">
-                    <span>Register</span>
+                    <span>Create account</span>
                 </button>
-                </form>
             </div>
+            </form>
         </div>
 
         <div class="login-div">

@@ -28,19 +28,18 @@
         
 
         <div class="login-div">
-            <h1 class="overlay__title login-header">Login to your account</h1>
+            <h1 class="overlay__title login-header">Forgot your password ?
+            </h1>
             <hr>
 
             <strong>Email</strong>
             <input class="input-form-login" maxlength="64" id="log-identifiant" type=text placeholder="email or username">
-            <strong class="pwd">Password</strong>
-            <input class="input-form-login" maxlength="64" id="log-password" type="password" placeholder="password">
             <div class="buttons-form-login">
-                <button onclick="sendLogin();" class="overlay__btn__1 overlay__btn--colors">
-                    <span>Login</span>
+                <button onclick="#;" class="overlay__btn__1 overlay__btn--colors">
+                    <span>Send Email</span>
                 </button>
-                <button onclick="window.location.href='/register';" class="overlay__btn__2 overlay__btn--colors">
-                    <span>Register</span>
+                <button onclick="window.location.href='/login';" class="overlay__btn__2 overlay__btn--colors">
+                    <span>Back to Login</span>
                 </button>
             </div>
             </form>

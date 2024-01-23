@@ -2,49 +2,32 @@
 <!-- Canvas -->
 <canvas class="orb-canvas"></canvas>
 <!-- Overlay -->
-<div class="overlay">
+<div class="overlay changepwd__container">
     <div class="header-login">
         <h1 class="overlay__title-DockNet">
 
             <span class="text-gradient-Quick">Quick</span>DockNet
         </h1>
     </div>
-    <div class="content-login">
+    <div class="content-login changepwd">
         <!-- Overlay inner wrapper -->
         <div class="overlay__inner">
-            <!-- Title -->
-            <h1 class="overlay__title">
-
-                <span class="text-gradient">Secure</span>
-                Connexion
-            </h1>
-            <!-- Description -->
-            <p class="overlay__description">
-                Protecting your data and securing your connection are at the heart of our commitment. We're proud to support you in your quest for a <strong>safe and serene online experience.</strong> Welcome to an era where the security of your connection is
-                <strong>our top priority...</strong>
-            </p>
-            <div class="buttons-form-login">
-                <button onclick="sendLogin();" class="overlay__btn__1 overlay__btn--colors">
-                    <span>Connect</span>
-                </button>
-                <button onclick="window.location.href='/register';" class="overlay__btn__2 overlay__btn--colors">
-                    <span>Register</span>
-                </button>
-            </div>
-        </div>
-
-        <div class="login-div">
-            <h1 class="overlay__title login-header">Login to your account</h1>
+            <h1 class="overlay__title login-header">Change your password</h1>
             <hr>
+            <strong>Password</strong>
+            <input id="reg-password" maxlength="64" class="input-form-login" type="password" placeholder="password">
 
-            <strong>Email</strong>
-            <input class="input-form-login" maxlength="64" id="log-identifiant" type=text placeholder="email or username">
-            <strong class="pwd">Password</strong>
-            <input class="input-form-login" maxlength="64" id="log-password" type="password" placeholder="password">
-            <div class="buttons-form-login btn__forgotpwd">
-                <a href='/forgotPwd'>Forgot your password ?</a>
-            </div>
-            </form>
+            <strong class="pwd">New Password</strong>
+            <input id="reg-password" maxlength="64" class="input-form-login" type="password" placeholder="new password">
+            <input id="reg-password2" maxlength="64" class="input-form-login" type="password" placeholder="re-type new password">
+            <div class="buttons-form-login">
+                <button onclick="#;" class="overlay__btn__1 overlay__btn--colors">
+                    <span>Change it !</span>
+                </button>
+                <button onclick="window.location.href='/home';" class="overlay__btn__2 overlay__btn--colors">
+                    <span>Back to Home</span>
+                </button>
+        </div>
         </div>
     </div>
 
