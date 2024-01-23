@@ -15,6 +15,12 @@
       <change beforePath="$PROJECT_DIR$/htdocs/actions/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/actions/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/htdocs/actions/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/actions/register.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/htdocs/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htdocs/modele/Mail.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/modele/Mail.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htdocs/modele/PHPMailer/Email.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/htdocs/modele/PHPMailer/Exception.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/modele/PHPMailer/Exception.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htdocs/modele/PHPMailer/OAuth.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/modele/PHPMailer/OAuth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htdocs/modele/PHPMailer/PHPMailer.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/modele/PHPMailer/PHPMailer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htdocs/modele/PHPMailer/SMTP.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/modele/PHPMailer/SMTP.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/htdocs/modele/action.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/modele/action.class.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/htdocs/modele/bdd.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/modele/bdd.class.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/htdocs/modele/data.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/modele/data.class.php" afterDir="false" />
@@ -72,7 +78,7 @@
       <updated>1706002126360</updated>
       <workItem from="1706002127358" duration="1994000" />
       <workItem from="1706004161860" duration="7000" />
-      <workItem from="1706005881173" duration="3220000" />
+      <workItem from="1706005881173" duration="4541000" />
     </task>
     <servers />
   </component>

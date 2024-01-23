@@ -21,10 +21,9 @@
 
 namespace modele\PHPMailer;
 
-
-use modele\oauth\google\league\Grant\RefreshToken;
-use modele\oauth\google\league\Provider\AbstractProvider;
-use modele\oauth\google\league\Token\AccessToken;
+use League\OAuth2\Client\Grant\RefreshToken;
+use League\OAuth2\Client\Provider\AbstractProvider;
+use League\OAuth2\Client\Token\AccessToken;
 
 /**
  * OAuth - OAuth2 authentication wrapper class.

@@ -3,7 +3,8 @@
 namespace modele;
 
 use Exception;
-use modele\PHPMailer\Email;
+use modele\PHPMailer\PHPMailer;
+use modele\PHPMailer\SMTP;
 use PDO;
 
 /**
@@ -42,16 +43,29 @@ class Mail {
         if($body == false) {
             return false;
         }
-
+        $mail = new PHPMailer(true);
         try {
-            $mail = new Email('smtp-relay.gmail.com', 587);
-            $mail->setProtocol(Email::TLS);
-            $mail->setLogin('guedesite77@gmail.com', 'hmiw fmni meyz saih');
-            $mail->addTo($to, $toName);
-            $mail->setFrom('no-reply@docknet.fr', 'DockNet');
-            $mail->setSubject($obj);
-            $mail->setHtmlMessage($body);
-            
+
+            $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+            $mail->isSMTP();                                            //Send using SMTP
+            $mail->Host       = 'smtp-relay.gmail.com';                     //Set the SMTP server to send through
+            $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+            $mail->Username   = 'guedesite77@gmail.com';                     //SMTP username
+            $mail->Password   = 'hmiw fmni meyz saih';                               //SMTP password
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
+            $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+
+            //Recipients
+            $mail->setFrom('guedesite77@gmail.com', 'guedesite77');
+            $mail->addAddress('guedesite77@gmail.com', 'guedesite77');     //Add a recipient
+            $mail->addReplyTo('info@example.com', 'Information');
+
+
+            //Content
+            $mail->isHTML(true);                                  //Set email format to HTML
+            $mail->Subject =  $obj;
+            $mail->Body    = $body;
+
             if($mail->send()){
                 return true;
             } else {
