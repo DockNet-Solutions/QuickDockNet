@@ -31,10 +31,10 @@
             <input id="reg-pseudo" maxlength="32" class="input-form-login" type="text" placeholder="Pseudonyme">
 
             <strong>Email</strong>
-            <input id="reg-email" maxlength="32" class="input-form-login" type="email" placeholder="email">
+            <input id="reg-email" maxlength="64" class="input-form-login" type="email" placeholder="email">
             <strong class="pwd">Password</strong>
-            <input id="reg-password" maxlength="32" class="input-form-login" type="password" placeholder="password">
-            <input id="reg-password2" maxlength="32" class="input-form-login" type="password" placeholder="re-type password">
+            <input id="reg-password" maxlength="64" class="input-form-login" type="password" placeholder="password">
+            <input id="reg-password2" maxlength="64" class="input-form-login" type="password" placeholder="re-type password">
             <div class="buttons-form-login">
                 <button onClick="window.location.href='/login';" class="overlay__btn__2 overlay__btn--colors">
                     <span>Login</span>
@@ -53,7 +53,7 @@
             const password = document.getElementById("reg-password").value;
             const password2 = document.getElementById("reg-password2").value;
             const pseudo = document.getElementById("reg-pseudo").value;
-            if(email.length < 32 && email.length > 0) {
+            if(email.length < 64 && email.length > 0 && pseudo.length < 64 && pseudo.length > 0 && password.length < 64 && password.length >= 8) {
                 if(password === password2) {
                     fetch("/index.php?action=register", {
                         method: "POST",
@@ -73,10 +73,10 @@
                         }
                     });
                 } else {
-                    toastr["error"]("Les mots de passes ne correspondent pas", "Erreur");
+                    toastr["error"]("Passwords not matching", "Error");
                 }
             }else {
-                toastr["error"]("Formulaire incomplet", "Erreur");
+                toastr["error"]("Incomplete form", "Erreur");
             }
         }
     </script>
