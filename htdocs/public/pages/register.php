@@ -53,7 +53,7 @@
             const password = document.getElementById("reg-password").value;
             const password2 = document.getElementById("reg-password2").value;
             const pseudo = document.getElementById("reg-pseudo").value;
-            if(email.length < 64 && email.length > 0 && pseudo.length < 64 && pseudo.length > 0 && password.length < 64 && password.length >= 8) {
+            if(email.length < 64 && email.length > 0 && pseudo.length < 64 && pseudo.length > 0 && password.length < 64 && password.length >= 12) {
                 if(password === password2) {
                     fetch("/index.php?action=register", {
                         method: "POST",

@@ -1,3 +1,9 @@
+<?php
+if(!isset($_SESSION['User'])) { // if not connected
+    header('Location: /login'); // forward to login page
+}
+?>
+
 <!-- Overlay -->
 <!-- Canvas -->
 <canvas class="orb-canvas"></canvas>
@@ -14,14 +20,14 @@
         <div class="overlay__inner">
             <h1 class="overlay__title login-header">Change your password</h1>
             <hr>
-            <strong>Password</strong>
-            <input id="reg-password" maxlength="64" class="input-form-login" type="password" placeholder="password">
+            <strong>Old Password</strong>
+            <input id="oldpass" maxlength="64" class="input-form-login" type="password" placeholder="password">
 
             <strong class="pwd">New Password</strong>
-            <input id="reg-password" maxlength="64" class="input-form-login" type="password" placeholder="new password">
-            <input id="reg-password2" maxlength="64" class="input-form-login" type="password" placeholder="re-type new password">
+            <input id="newpass" maxlength="64" class="input-form-login" type="password" placeholder="new password">
+            <input id="newpass2" maxlength="64" class="input-form-login" type="password" placeholder="re-type new password">
             <div class="buttons-form-login">
-                <button onclick="#;" class="overlay__btn__1 overlay__btn--colors">
+                <button onclick="sendChangePass()" class="overlay__btn__1 overlay__btn--colors">
                     <span>Change it !</span>
                 </button>
                 <button onclick="window.location.href='/home';" class="overlay__btn__2 overlay__btn--colors">
@@ -32,16 +38,17 @@
     </div>
 
     <script>
-        function sendLogin() {
-            const identifiant = document.getElementById("log-identifiant").value;
-            const password = document.getElementById("log-password").value;
-            if(identifiant.length < 64 && identifiant.length > 0 && password.length < 64 && password.length > 0) {
-                    fetch("/index.php?action=login", {
+        function sendChangePass() {
+            const new_password = document.getElementById("newpass").value;
+            const new_password2 = document.getElementById("newpass2").value;
+            const old_password = document.getElementById("oldpass").value;
+            if(new_password.length < 64 && new_password.length >= 12 && new_password2.length < 64 && new_password2.length >= 12 && old_password.length < 64 && old_password.length > 0) {
+                    fetch("/index.php?action=changePassword", {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json",
                         },
-                        body: JSON.stringify({ identifiant: identifiant, password: password })
+                        body: JSON.stringify({ new_password: new_password, old_password: old_password })
                     }).then(data => data.json()).then(json => {
                         console.log(json);
                         if(json.toastr) {

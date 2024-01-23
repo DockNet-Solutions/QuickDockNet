@@ -52,7 +52,7 @@
         function sendLogin() {
             const identifiant = document.getElementById("log-identifiant").value;
             const password = document.getElementById("log-password").value;
-            if(identifiant.length < 64 && identifiant.length > 0 && password.length < 64 && password.length > 0) {
+            if(identifiant.length < 64 && identifiant.length > 0 && password.length < 64 && password.length >= 12) {
                     fetch("/index.php?action=login", {
                         method: "POST",
                         headers: {

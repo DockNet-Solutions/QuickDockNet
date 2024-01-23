@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f1aff91-2863-42ff-884d-eb396b7e405b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/htdocs/actions/activateAccount.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
@@ -13,6 +12,7 @@
       <change beforePath="$PROJECT_DIR$/base.sql" beforeDir="false" afterPath="$PROJECT_DIR$/base.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/htdocs/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htdocs/actions/activateAccount.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/actions/activateAccount.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/htdocs/actions/changePassword.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/actions/changePassword.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/htdocs/actions/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/actions/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/htdocs/actions/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/actions/register.php" afterDir="false" />
@@ -25,7 +25,8 @@
       <change beforePath="$PROJECT_DIR$/htdocs/public/assets/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/public/assets/theme.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/htdocs/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/public/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/htdocs/public/pages/accueil.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/public/pages/accueil.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/htdocs/public/pages/forgotPwd.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/public/pages/forgotPwd.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htdocs/public/pages/changePwd.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/public/pages/changePwd.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htdocs/public/pages/forgotPwd.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/htdocs/public/pages/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/public/pages/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/htdocs/public/pages/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/public/pages/register.php" afterDir="false" />
     </list>
@@ -79,7 +80,7 @@
       <workItem from="1706002127358" duration="1994000" />
       <workItem from="1706004161860" duration="7000" />
       <workItem from="1706005881173" duration="4625000" />
-      <workItem from="1706017832335" duration="3498000" />
+      <workItem from="1706017832335" duration="5674000" />
     </task>
     <servers />
   </component>

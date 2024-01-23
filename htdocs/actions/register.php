@@ -24,8 +24,8 @@ if(strlen($_POST['pseudo']) > 64 || strlen($_POST['email']) > 64 || strlen($_POS
 }
 
 
-if(!preg_match('/[0-9A-Z]/', $_POST['password'])) {
-    jsonState::returnNotif("error", "Error", "The password must contain a number and an uppercase letter!");
+if(!preg_match('/^(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).+$/', $_POST['password'])) {
+    jsonState::returnNotif("error", "Error", "The password must contain a number, an uppercase letter and a special character!");
     return;
 }
 
