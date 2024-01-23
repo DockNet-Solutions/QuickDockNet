@@ -47,6 +47,13 @@ class action {
                     include("actions/login.php");
                     jsonState::call();
                     exit();
+                case 'changePassword':
+                    include("actions/changePassword.php");
+                    jsonState::call();
+                    exit();
+                case 'activateAccount':
+                    include("actions/activateAccount.php");
+                    exit();
                 default:
                     header('Location: index.php?page=404');
             }
