@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f1aff91-2863-42ff-884d-eb396b7e405b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/htdocs/actions/changePassword.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
@@ -15,12 +16,6 @@
       <change beforePath="$PROJECT_DIR$/htdocs/actions/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/actions/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/htdocs/actions/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/actions/register.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/htdocs/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/htdocs/modele/Mail.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/modele/Mail.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/htdocs/modele/PHPMailer/Email.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/htdocs/modele/PHPMailer/Exception.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/modele/PHPMailer/Exception.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/htdocs/modele/PHPMailer/OAuth.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/modele/PHPMailer/OAuth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/htdocs/modele/PHPMailer/PHPMailer.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/modele/PHPMailer/PHPMailer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/htdocs/modele/PHPMailer/SMTP.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/modele/PHPMailer/SMTP.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/htdocs/modele/action.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/modele/action.class.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/htdocs/modele/bdd.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/modele/bdd.class.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/htdocs/modele/data.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/modele/data.class.php" afterDir="false" />
@@ -29,6 +24,7 @@
       <change beforePath="$PROJECT_DIR$/htdocs/public/assets/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/public/assets/theme.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/htdocs/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/public/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/htdocs/public/pages/accueil.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/public/pages/accueil.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htdocs/public/pages/forgotPwd.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/public/pages/forgotPwd.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/htdocs/public/pages/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/public/pages/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/htdocs/public/pages/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/public/pages/register.php" afterDir="false" />
     </list>
@@ -50,6 +46,9 @@
   &quot;associatedIndex&quot;: 4
 }</component>
   <component name="ProjectId" id="2bLlEHctkhUiHjggPYMrbstiHmD" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -59,7 +58,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Phase-2",
+    "git-widget-placeholder": "Phase-3",
     "last_opened_file_path": "//wsl$/Ubuntu/root/QuickDockNet",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -78,7 +77,8 @@
       <updated>1706002126360</updated>
       <workItem from="1706002127358" duration="1994000" />
       <workItem from="1706004161860" duration="7000" />
-      <workItem from="1706005881173" duration="4541000" />
+      <workItem from="1706005881173" duration="4625000" />
+      <workItem from="1706017832335" duration="1572000" />
     </task>
     <servers />
   </component>
