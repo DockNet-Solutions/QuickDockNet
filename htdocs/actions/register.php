@@ -17,7 +17,7 @@ if(strlen($_POST['password']) < 8) {
 $_POST['pseudo'] = htmlspecialchars($_POST['pseudo']);
 $_POST['email'] = htmlspecialchars($_POST['email']);
 
-if(strlen($_POST['pseudo']) > 64 || strlen($_POST['email']) || strlen($_POST['password'])) {
+if(strlen($_POST['pseudo']) > 64 || strlen($_POST['email']) >64|| strlen($_POST['password']) >64) {
     jsonState::returnNotif("error", "Error", "Incomplete form");
     return;
 }
