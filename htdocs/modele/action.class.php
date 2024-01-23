@@ -37,6 +37,7 @@ class action {
      */
     public static function invoke() : void {
         if(isset($_GET['action'])) {
+            $_POST = json_decode(file_get_contents('php://input'), true);
             switch($_GET['action']) {
                 case 'register':
                     include("actions/register.php");

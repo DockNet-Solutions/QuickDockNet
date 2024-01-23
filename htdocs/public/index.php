@@ -1,19 +1,35 @@
-<!DOCTYPE HTML>
-<html lang="fr">
+<html>
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login QuickDockNet</title>
+        <meta charset="utf-8">
 
-        <meta name="theme-color" content="main">
-        <meta name="msapplication-navbutton-color" content="main">
-        <meta name="apple-mobile-web-app-statut-bar-style" content="main">
-
-        <meta name="robots" content="follow, index, all">
-        <meta name="google" content="notranslate">
-
-        <link type="text/css" href="public/assets/theme.css" rel="stylesheet">
-        <script type="application/javascript" src="public/assets/custom.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js" integrity="sha512-lbwH47l/tPXJYG9AcFNoJaTMhGvYWhVM9YI43CT+uteTRRaiLCui8snIgyAN8XWgNjNhCqlAUdzZptso6OCoFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="public/assets/theme.css">
+        <script type="module" src="public/assets/custom.js"></script>
+        <script
+                src="https://code.jquery.com/jquery-3.7.1.min.js"
+                integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+                crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            toastr.options = {
+                "closeButton"   : true,
+                "debug"         : true,
+                "newestOnTop"      : false,
+                "progressBar"      : false,
+                "positionClass"    : "toast-top-right",
+                "preventDuplicates": false,
+                "onclick"          : null,
+                "showDuration"     : "500",
+                "hideDuration"     : "500",
+                "timeOut"          : "5000",
+                "extendedTimeOut"  : "1000",
+                "showEasing"       : "swing",
+                "hideEasing"       : "linear",
+                "showMethod"       : "fadeIn",
+                "hideMethod"       : "fadeOut"
+            }
+        </script>
     </head>
     <body>
         <?php 

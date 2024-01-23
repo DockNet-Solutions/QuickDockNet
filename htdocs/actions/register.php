@@ -3,23 +3,31 @@
 use modele\jsonState;
 use modele\bdd;
 
+
 if(!(isset($_POST['password']) & isset($_POST['email']) & isset($_POST['pseudo']))) {
-    jsonState::returnNotif("error", "Erreur", "Une erreur interne est survenue.");
+    jsonState::returnNotif("error", "Error", "An internal error has occurred");
     return;
 }
 
-if(strlen($_POST['password']) < 12) {
-    jsonState::returnNotif("error", "Erreur", "Le mot de passe doit faire plus de 6 caractères !");
-    return;
-}
-
-if(!preg_match('/[0-9A-Z]/', $str)) {
-    jsonState::returnNotif("error", "Erreur", "Le mot de passe doit contenir un chiffre et une majuscule !");
+if(strlen($_POST['password']) < 8) {
+    jsonState::returnNotif("error", "Error", "The password must be longer than 8 characters!");
     return;
 }
 
 $_POST['pseudo'] = htmlspecialchars($_POST['pseudo']);
 $_POST['email'] = htmlspecialchars($_POST['email']);
+
+if(strlen($_POST['pseudo']) > 64 || strlen($_POST['email']) || strlen($_POST['password'])) {
+    jsonState::returnNotif("error", "Error", "Incomplete form");
+    return;
+}
+
+
+if(!preg_match('/[0-9A-Z]/', $_POST['password'])) {
+    jsonState::returnNotif("error", "Error", "The password must contain a number and an uppercase letter!");
+    return;
+}
+
 
 $bdd = bdd::getBdd();
 
@@ -31,25 +39,25 @@ $info = $req->fetchAll(PDO::FETCH_ASSOC);
 if(isset($info) && !empty($info)) {
     foreach($info as $d) {
         if($d['pseudo'] == $_POST['pseudo']) {
-            jsonState::returnNotif("error", "Erreur", "Un compte avec ce pseudo existe déjà.");
+            jsonState::returnNotif("error", "Error", "An account with this nickname already exists.");
             return;
         } else if($d['email'] == $_POST['email']) {
-            jsonState::returnNotif("error", "Erreur", "Un compte avec cet email existe déjà.");
+            jsonState::returnNotif("error", "Error", "An account with this email already exists.");
             return;
         }
     }
-    jsonState::returnNotif("error", "Erreur", "Un compte ces identifiants existe déjà.");
+    jsonState::returnNotif("error", "Error", "An account with these identifiers already exists.");
 } else { 
     $req = $bdd->prepare("INSERT INTO users (pseudo, email, password, joinDate) VALUES (:pseudo, :email, :password, :joinDate)");
-    $req->execute(array("pseudo" => $_POST['pseudo'], "email" => $_POST['email'], "password" => password_hash($_POST['password'], PASSWORD_DEFAULT), "joinDate" => time());
+    $req->execute(array("pseudo" => $_POST['pseudo'], "email" => $_POST['email'], "password" => password_hash($_POST['password'], PASSWORD_DEFAULT), "joinDate" => time()));
     
-    $req = $this->bdd->prepare("SELECT * FROM users WHERE pseudo=:pseudo");
+    $req = $bdd->prepare("SELECT * FROM users WHERE pseudo=:pseudo");
     $req->execute(array("pseudo" => $_POST['pseudo']));
-    $_SESSION['User'] = $this->info = $req->fetch(PDO::FETCH_ASSOC);
+    $_SESSION['User'] = $req->fetch(PDO::FETCH_ASSOC);
     $_SESSION['User']['temp'] = time();
         
     
-    jsonState::returnNotif("success", "Enregistrement réussie !", "Bienvenue sur Docknet !");
-    jsonState::returnJson("refresh", true);
+    jsonState::returnNotif("success", "Registration successful!", "Welcome to Docknet!");
+    jsonState::returnJson("goUrl", "/login");
 }
 ?>
