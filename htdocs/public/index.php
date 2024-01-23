@@ -33,8 +33,6 @@
     </head>
     <body>
         <?php
-        var_dump($_GET["page"]);
-        exit();
             if(isset($_GET["page"])) {
                 switch($_GET["page"]) {
                     case 'login':

@@ -43,6 +43,10 @@ class action {
                     include("actions/register.php");
                     jsonState::call();
                     exit();
+                case 'login':
+                    include("actions/login.php");
+                    jsonState::call();
+                    exit();
                 default:
                     header('Location: index.php?page=404');
             }

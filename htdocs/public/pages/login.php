@@ -64,7 +64,7 @@
                         if(json.goUrl) {
                             setTimeout(function () {
                                 window.open(json.goUrl,"_self");
-                            }, 1000);
+                            }, 3000);
                         }
                     });
             }else {

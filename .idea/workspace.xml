@@ -5,8 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f1aff91-2863-42ff-884d-eb396b7e405b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base.sql" beforeDir="false" afterPath="$PROJECT_DIR$/base.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htdocs/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htdocs/actions/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/actions/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htdocs/actions/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/actions/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htdocs/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htdocs/modele/action.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/modele/action.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htdocs/modele/bdd.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/modele/bdd.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htdocs/modele/data.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/modele/data.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htdocs/modele/jsonState.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/modele/jsonState.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htdocs/public/assets/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/public/assets/custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htdocs/public/assets/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/public/assets/theme.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htdocs/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htdocs/public/pages/accueil.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/public/pages/accueil.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/htdocs/public/pages/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/public/pages/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htdocs/public/pages/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/public/pages/register.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,20 +48,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Phase-2&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/git/QuickDockNet&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "Phase-2",
+    "last_opened_file_path": "//wsl$/Ubuntu/root/QuickDockNet",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -54,6 +72,7 @@
       <updated>1706002126360</updated>
       <workItem from="1706002127358" duration="1994000" />
       <workItem from="1706004161860" duration="7000" />
+      <workItem from="1706005881173" duration="278000" />
     </task>
     <servers />
   </component>
