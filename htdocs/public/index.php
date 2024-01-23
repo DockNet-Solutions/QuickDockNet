@@ -48,6 +48,12 @@
                     case 'changePwd':
                         include("pages/changePwd.php");
                         break;
+                    case 'forgotPwd':
+                        include("pages/forgotPwd.php");
+                        break;
+                    case 'emailForgotPwd':
+                        include("pages/emailForgotPwd.php");
+                        break;
                     default:
                         include("pages/404.php");
                         break;
