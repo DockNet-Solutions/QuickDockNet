@@ -54,6 +54,12 @@ class action {
                 case 'activateAccount':
                     include("actions/activateAccount.php");
                     exit();
+                case 'recoverPassword':
+                    include("actions/recoverPassword.php");
+                    exit();
+                case 'generateRecoverPassword':
+                    include("actions/generateRecoverPassword.php");
+                    exit();
                 default:
                     header('Location: index.php?page=404');
             }

@@ -1,6 +1,23 @@
 <?php
-if(!isset($_SESSION['User'])) { // if not connected
-    header('Location: /login'); // forward to login page
+
+use modele\bdd;
+
+if(!isset($_GET['token'])) {
+    header("Location: /login");
+    return;
+}
+
+$_POST["token"] = htmlspecialchars($_POST["token"]);
+
+$bdd = bdd::getBdd();
+
+$req = $bdd->prepare("SELECT * FROM `passRecover` WHERE token=:token");
+$req->execute(array("token"=>$_POST["token"]));
+$info = $req->fetch(PDO::FETCH_ASSOC);
+
+if(time() - 10*60 > $info["createAt"]) {
+    echo 'This link has expired.';
+    exit();
 }
 ?>
 
@@ -36,14 +53,14 @@ if(!isset($_SESSION['User'])) { // if not connected
         function sendChangePass() {
             const new_password = document.getElementById("newpass").value;
             const new_password2 = document.getElementById("newpass2").value;
-            const old_password = document.getElementById("oldpass").value;
-            if(new_password.length < 64 && new_password.length >= 12 && new_password2.length < 64 && new_password2.length >= 12 && old_password.length < 64 && old_password.length > 0) {
-                    fetch("/index.php?action=changePassword", {
+            if(new_password.length < 64 && new_password.length >= 12 && new_password2.length < 64 && new_password2.length >= 12
+            && new_password === new_password2) {
+                    fetch("/index.php?action=recoverPassword", {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json",
                         },
-                        body: JSON.stringify({ new_password: new_password, old_password: old_password })
+                        body: JSON.stringify({ new_password: new_password, })
                     }).then(data => data.json()).then(json => {
                         console.log(json);
                         if(json.toastr) {

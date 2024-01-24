@@ -33,9 +33,9 @@
             <hr>
 
             <strong>Email</strong>
-            <input class="input-form-login" maxlength="64" id="log-identifiant" type=text placeholder="email or username">
+            <input class="input-form-login" maxlength="64" id="email" type=text placeholder="email or username">
             <div class="buttons-form-login">
-                <button onclick="#;" class="overlay__btn__1 overlay__btn--colors">
+                <button onclick="sendRecover()" class="overlay__btn__1 overlay__btn--colors">
                     <span>Send Email</span>
                 </button>
                 <button onclick="window.location.href='/login';" class="overlay__btn__2 overlay__btn--colors">
@@ -47,16 +47,15 @@
     </div>
 
     <script>
-        function sendLogin() {
-            const identifiant = document.getElementById("log-identifiant").value;
-            const password = document.getElementById("log-password").value;
-            if(identifiant.length < 64 && identifiant.length > 0 && password.length < 64 && password.length > 0) {
-                    fetch("/index.php?action=login", {
+        function sendRecover() {
+            const email = document.getElementById("email).value;
+            if(email.length < 64 && email.length > 0) {
+                    fetch("/index.php?action=generateRecoverPassword", {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json",
                         },
-                        body: JSON.stringify({ identifiant: identifiant, password: password })
+                        body: JSON.stringify({ email: email })
                     }).then(data => data.json()).then(json => {
                         console.log(json);
                         if(json.toastr) {

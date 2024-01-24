@@ -26,7 +26,8 @@
       <change beforePath="$PROJECT_DIR$/htdocs/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/public/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/htdocs/public/pages/accueil.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/public/pages/accueil.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/htdocs/public/pages/changePwd.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/public/pages/changePwd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/htdocs/public/pages/forgotPwd.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/htdocs/public/pages/emailForgotPwd.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/public/pages/emailForgotPwd.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htdocs/public/pages/forgotPwd.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/public/pages/forgotPwd.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/htdocs/public/pages/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/public/pages/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/htdocs/public/pages/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/public/pages/register.php" afterDir="false" />
     </list>
@@ -60,7 +61,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Phase-3",
+    "git-widget-placeholder": "Phase-4",
     "last_opened_file_path": "//wsl$/Ubuntu/root/QuickDockNet",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -80,7 +81,7 @@
       <workItem from="1706002127358" duration="1994000" />
       <workItem from="1706004161860" duration="7000" />
       <workItem from="1706005881173" duration="4625000" />
-      <workItem from="1706017832335" duration="5674000" />
+      <workItem from="1706017832335" duration="9463000" />
     </task>
     <servers />
   </component>
