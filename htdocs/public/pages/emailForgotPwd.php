@@ -7,15 +7,15 @@ if(!isset($_GET['token'])) {
     return;
 }
 
-$_POST["token"] = htmlspecialchars($_POST["token"]);
+$_GET["token"] = htmlspecialchars($_GET["token"]);
 
 $bdd = bdd::getBdd();
 
 $req = $bdd->prepare("SELECT * FROM `passRecover` WHERE token=:token");
-$req->execute(array("token"=>$_POST["token"]));
+$req->execute(array("token"=>$_GET["token"]));
 $info = $req->fetch(PDO::FETCH_ASSOC);
 
-if(time() - 10*60 > $info["createAt"]) {
+if(time() - 10*60 > $info["createdAt"]) {
     echo 'This link has expired.';
     exit();
 }
@@ -54,13 +54,13 @@ if(time() - 10*60 > $info["createAt"]) {
             const new_password = document.getElementById("newpass").value;
             const new_password2 = document.getElementById("newpass2").value;
             if(new_password.length < 64 && new_password.length >= 12 && new_password2.length < 64 && new_password2.length >= 12
-            && new_password === new_password2) {
+            && new_password.value === new_password2.value) {
                     fetch("/index.php?action=recoverPassword", {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json",
                         },
-                        body: JSON.stringify({ new_password: new_password, })
+                        body: JSON.stringify({ new_password: new_password,token: "<?=$_GET["token"]?>" })
                     }).then(data => data.json()).then(json => {
                         console.log(json);
                         if(json.toastr) {

@@ -57,10 +57,10 @@ if(isset($info) && !empty($info)) {
     $_SESSION['User'] = $req->fetch(PDO::FETCH_ASSOC);
     $_SESSION['User']['temp'] = time();
 
-    Mail::sendMail("Welcome ".$_SESSION['pseudo']." to DockNet !",
+    Mail::sendMail("Welcome ".$_SESSION['User']['pseudo']." to DockNet !",
         Mail::build("Welcome to DockNet !",
-            "Thanks for joining us ! <a href='localhost:80/index.php?action=activateAccount&account=".$_SESSION['User']["id"]."'>Activate your account now !</a> "),
-        $_SESSION['email'], $_SESSION['pseudo']);
+            "Thanks for joining us ! <a target=\"_blank\" href=\"http://localhost:80/index.php?action=activateAccount&account=".$_SESSION['User']['id']."\">Activate your account now !</a> "),
+        $_SESSION['User']['email'], $_SESSION['User']['pseudo']);
         
     
     jsonState::returnNotif("success", "Registration successful!", "Welcome to Docknet!");

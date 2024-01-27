@@ -56,9 +56,11 @@ class action {
                     exit();
                 case 'recoverPassword':
                     include("actions/recoverPassword.php");
+                    jsonState::call();
                     exit();
                 case 'generateRecoverPassword':
                     include("actions/generateRecoverPassword.php");
+                    jsonState::call();
                     exit();
                 default:
                     header('Location: index.php?page=404');

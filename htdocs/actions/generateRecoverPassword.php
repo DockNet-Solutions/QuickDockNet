@@ -3,6 +3,7 @@ use modele\bdd;
 use modele\jsonState;
 use modele\Mail;
 
+
 if(!isset($_POST['email'])) {
     jsonState::returnNotif("error", "Error", "An internal error has occurred");
     return;
@@ -16,6 +17,7 @@ $req = $bdd->prepare("SELECT * FROM users WHERE email=:email");
 $req->execute(array("email" => $_POST["email"]));
 $info = $req->fetch(PDO::FETCH_ASSOC);
 
+
 if(isset($info) && !empty($info)) {
 
     $token = generateRandomToken(32);
@@ -24,9 +26,9 @@ if(isset($info) && !empty($info)) {
 
     Mail::sendMail("Register your new password now ".$info["pseudo"],
         Mail::build("Register your password",
-            " <a href='localhost:80/index.php?page=emailForgotPwd&token=".$token."'>Setup new password</a> "),
+            " <a target=\"_blank\" href=\"http://localhost:80/index.php?page=emailForgotPwd&token=".$token."\">Setup new password</a> "),
         $info["email"], $info["pseudo"]);
-    jsonState::returnNotif("Success", "An email has just been sent to you", "");
+    jsonState::returnNotif("success", "An email has just been sent to you", "");
     jsonState::returnJson("goUrl", "/home");
 } else {
     jsonState::returnNotif("error", "Error", "No account found with this email");

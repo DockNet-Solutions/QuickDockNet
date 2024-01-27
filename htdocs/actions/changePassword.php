@@ -23,7 +23,7 @@ $info = $req->fetch(PDO::FETCH_ASSOC);
 if(password_verify($_POST["old_password"], $info["password"])) {
     $req = $bdd->prepare("UPDATE `users` SET `password`=:newpassword WHERE id=:id");
     $req->execute(array("id" => $_SESSION["User"]["id"], "newpassword" => password_hash($_POST["new_password"], PASSWORD_DEFAULT)));
-    jsonState::returnNotif("Success", "Password change successfully", "");
+    jsonState::returnNotif("success", "Password change successfully", "");
     jsonState::returnJson("goUrl", "/home");
 } else {
     jsonState::returnNotif("error", "Error", "Old password don't match");

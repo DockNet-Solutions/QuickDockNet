@@ -48,7 +48,7 @@
 
     <script>
         function sendRecover() {
-            const email = document.getElementById("email).value;
+            const email = document.getElementById("email").value;
             if(email.length < 64 && email.length > 0) {
                     fetch("/index.php?action=generateRecoverPassword", {
                         method: "POST",
