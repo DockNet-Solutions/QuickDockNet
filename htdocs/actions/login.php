@@ -4,13 +4,19 @@ use modele\jsonState;
 use modele\bdd;
 
 
-if(!(isset($_POST['password']) & isset($_POST['identifiant']))) {
+
+if(!(isset($_POST['password']) & isset($_POST['identifiant']) & isset($_POST['captcha']))) {
     jsonState::returnNotif("error", "Error", "An internal error has occurred");
     return;
 }
 
 if(strlen($_POST['identifiant']) > 64 || strlen($_POST['password']) > 64) {
     jsonState::returnNotif("error", "Error", "Incomplete form");
+    return;
+}
+
+if($_SESSION["captcha_login"] != $_POST['captcha']) {
+    jsonState::returnNotif("error", "Error", "Wrong captcha");
     return;
 }
 

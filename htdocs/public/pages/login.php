@@ -1,3 +1,7 @@
+<?php
+use modele\PureCaptcha;
+?>
+
 <!-- Overlay -->
 <!-- Canvas -->
 <canvas class="orb-canvas"></canvas>
@@ -41,6 +45,17 @@
             <input class="input-form-login" maxlength="64" id="log-identifiant" type=text placeholder="email or username">
             <strong class="pwd">Password</strong>
             <input class="input-form-login" maxlength="64" id="log-password" type="password" placeholder="password">
+            <hr style="margin-top:0;border-color:black;"/>
+            <div style="text-align: center">
+                <img style="height:70px;" src='<?php
+                $p = new PureCaptcha();
+                $_SESSION["captcha_login"] = $p->show();
+                ?>' height='22'/>
+            </div>
+
+            <strong>Captcha:</strong>
+            <input class="input-form-login" maxlength="10" id="captcha" type="text" placeholder="code">
+
             <div class="buttons-form-login btn__forgotpwd">
                 <a href='/forgotPwd'>Forgot your password ?</a>
             </div>
@@ -51,13 +66,14 @@
         function sendLogin() {
             const identifiant = document.getElementById("log-identifiant").value;
             const password = document.getElementById("log-password").value;
-            if(identifiant.length < 64 && identifiant.length > 0 && password.length < 64 && password.length >= 12) {
+            const captcha = document.getElementById("captcha").value;
+            if(identifiant.length < 64 && identifiant.length > 0 && password.length < 64 && password.length >= 12 && captcha.length > 0 && captcha.length < 10) {
                     fetch("/index.php?action=login", {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json",
                         },
-                        body: JSON.stringify({ identifiant: identifiant, password: password })
+                        body: JSON.stringify({ identifiant: identifiant, password: password, captcha: captcha })
                     }).then(data => data.json()).then(json => {
                         console.log(json);
                         if(json.toastr) {
