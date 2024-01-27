@@ -57,7 +57,7 @@ class Mail {
 
             //Recipients
             $mail->setFrom('no-reply@cubedfusion.com', 'DockNet');
-            $mail->addAddress('guedesite77@gmail.com', 'guedesite77');     //Add a recipient
+            $mail->addAddress($to, $toName);     //Add a recipient
 
 
             //Content
