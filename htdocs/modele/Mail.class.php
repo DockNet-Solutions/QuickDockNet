@@ -46,19 +46,18 @@ class Mail {
         $mail = new PHPMailer(true);
         try {
 
-            $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+            //$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
             $mail->isSMTP();                                            //Send using SMTP
-            $mail->Host       = 'smtp-relay.gmail.com';                     //Set the SMTP server to send through
+            $mail->Host       = 'ssl0.ovh.net';                     //Set the SMTP server to send through
             $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-            $mail->Username   = 'guedesite77@gmail.com';                     //SMTP username
-            $mail->Password   = 'hmiw fmni meyz saih';                               //SMTP password
+            $mail->Username   = 'no-reply@cubedfusion.com';                     //SMTP username
+            $mail->Password   = 'jAm21R3mWGltiHC';                               //SMTP password
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
-            $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+            $mail->Port       = 587;                                    //TCP port to connect to
 
             //Recipients
-            $mail->setFrom('guedesite77@gmail.com', 'guedesite77');
-            $mail->addAddress('guedesite77@gmail.com', 'guedesite77');     //Add a recipient
-            $mail->addReplyTo('info@example.com', 'Information');
+            $mail->setFrom('no-reply@cubedfusion.com', 'DockNet');
+            $mail->addAddress($to, $toName);     //Add a recipient
 
 
             //Content
@@ -181,7 +180,7 @@ class Mail {
           <tr>
             <td align="center" valign="top" style="padding: 36px 24px;">
               <a href="https://github.com/DockNet-Solutions" target="_blank" style="display: inline-block;">
-              <img src="https://i.imgur.com/6UkwJGR.png" alt="Logo" border="0" width="48" style="display: block; width: 48px; max-width: 48px; min-width: 48px;">
+              <img src="https://i.imgur.com/6UkwJGR.png" alt="Logo" border="0" width="48" style="display: block; width: 148px; max-width: 148px; min-width: 148px;">
               </a>
             </td>
           </tr>
