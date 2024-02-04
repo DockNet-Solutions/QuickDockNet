@@ -33,6 +33,6 @@ Utilisez une fonction pour générer un token aléatoire sécurisé à utiliser 
 # Test de la Fonctionnalité :
 
 Testez le fonctionnement de la page "Mot de Passe Oublié" en vérifiant que l'e-mail de réinitialisation est envoyé avec succès.
-Tests
+
 # Fonctionnement de la Page "Mot de Passe Oublié" :
 Testez le fonctionnement de la page d'oubli de mot de passe avec l'envoi d'un lien par e-mail pour définir le nouveau mot de passe.
