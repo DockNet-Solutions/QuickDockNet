@@ -2,7 +2,7 @@
 
 Ce référentiel contient la mise en œuvre de la Phase 1 du projet. L'objectif de cette phase est de configurer la fonctionnalité d'enregistrement des utilisateurs et de l'intégrer à une base de données MySQL nommée docknet. Nous utilisons PDO (PHP Data Objects) pour la connectivité à la base de données.
 
-Instructions
+# Instructions
 Clonez le référentiel sur votre machine locale :
 
 bash
@@ -31,7 +31,7 @@ Assurez-vous d'avoir Docker Compose installé sur votre système. Cette commande
 
 Accédez à localhost/register pour accéder à la page d'inscription au compte.
 
-Testez le processus d'inscription :
+# Testez le processus d'inscription :
 
 Essayez de vous inscrire avec un mot de passe de moins de 8 caractères. Assurez-vous que le message d'erreur "Formulaire incomplet" est affiché.
 
