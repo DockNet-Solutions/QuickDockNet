@@ -1,6 +1,5 @@
 # QuickDockNet
 
-Aperçu
 Ce référentiel contient la mise en œuvre de la Phase 1 du projet. L'objectif de cette phase est de configurer la fonctionnalité d'enregistrement des utilisateurs et de l'intégrer à une base de données MySQL nommée docknet. Nous utilisons PDO (PHP Data Objects) pour la connectivité à la base de données.
 
 Instructions
