@@ -33,9 +33,11 @@ Ajoutez une page permettant aux utilisateurs de changer leur mot de passe en tap
 # Test des Fonctionnalités :
 
 Testez la création de compte avec des mots de passe répondant aux nouvelles exigences.
+
 Vérifiez la réception de l'e-mail de confirmation d'activation de compte.
+
 Utilisez la page de connexion pour vous connecter et vérifiez la possibilité de changer votre mot de passe en tapant l'ancien.
-Tests
+
 
 # Réception de l'E-mail de Confirmation d'Activation de Compte :
 
