@@ -2,11 +2,10 @@
 
 Ce référentiel contient la mise en œuvre de la Phase 1 du projet. L'objectif de cette phase est de configurer la fonctionnalité d'enregistrement des utilisateurs et de l'intégrer à une base de données MySQL nommée docknet. Nous utilisons PDO (PHP Data Objects) pour la connectivité à la base de données.
 
-# Instructions
+# Installation Locale
 Clonez le référentiel sur votre machine locale :
 
 ```bash
-
 git clone https://github.com/votre-nom/phase-1.git
 ```
 Importez le fichier SQL base.sql dans votre base de données MySQL docknet. Ce fichier contient la structure de la table users.
