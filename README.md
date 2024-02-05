@@ -28,7 +28,7 @@ Assurez-vous d'avoir `Docker Compose` installé sur votre système. Cette comman
 
 Accédez à `localhost/register` pour accéder à la page d'inscription au compte.
 
-## Testez le processus d'inscription :
+## Testez le processus d'inscription
 
 Essayez de vous inscrire avec un mot de passe de moins de 8 caractères. Assurez-vous que le message d'erreur "Formulaire incomplet" est affiché.
 
