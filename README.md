@@ -22,11 +22,7 @@ Assurez-vous d'avoir `Docker Compose` installé sur votre système. Cette comman
 
 Implémentez le captcha sur la page de connexion pour empêcher les attaques automatisées.
 
-## Test du Fonctionnement du Captcha
-
-IN PROGRESS...
-
-## Assurez-vous que le captcha fonctionne correctement en vérifiant les scénarios suivants
+## Test du fonctionnement du captcha en vérifiant les scénarios suivants
 
 - Lorsque le captcha n'est pas complété, le message d'erreur "Formulaire incomplet" est affiché.
 - Lorsque le captcha est incorrect, le message d'erreur "Captcha incorrect" est affiché.
