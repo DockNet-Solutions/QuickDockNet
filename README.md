@@ -5,10 +5,10 @@ Ce référentiel contient la mise en œuvre de la Phase 1 du projet. L'objectif 
 # Instructions
 Clonez le référentiel sur votre machine locale :
 
-bash
+```bash
 
 git clone https://github.com/votre-nom/phase-1.git
-
+```
 Importez le fichier SQL base.sql dans votre base de données MySQL docknet. Ce fichier contient la structure de la table users.
 
 Assurez-vous que votre environnement serveur respecte les exigences suivantes :
