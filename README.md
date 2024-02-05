@@ -12,23 +12,21 @@ Importez le fichier SQL `base.sql` dans votre base de données MySQL docknet. Ce
 
 Assurez-vous que votre environnement serveur respecte les exigences suivantes :
 
-PHP installé (version 7.0 ou supérieure recommandée)
+-PHP installé (version 7.0 ou supérieure recommandée)
+-MySQL installé
+-Extension PDO activée dans PHP
 
-MySQL installé
+Configurez la connexion à la base de données dans `config.php`. Fournissez les identifiants nécessaires tels que le nom d'hôte, le nom de la base de données, le nom d'utilisateur et le mot de passe.
 
-Extension PDO activée dans PHP
+Commande à exécuter pour démarrer l'application :
 
-Configurez la connexion à la base de données dans config.php. Fournissez les identifiants nécessaires tels que le nom d'hôte, le nom de la base de données, le nom d'utilisateur et le mot de passe.
-
-voici la commande à exécuter pour démarrer l'application :
-
-bash
-
+```bash
 sudo docker-compose up -d --build
+```
 
-Assurez-vous d'avoir Docker Compose installé sur votre système. Cette commande va construire les conteneurs Docker et démarrer l'application en arrière-plan.
+Assurez-vous d'avoir `Docker Compose` installé sur votre système. Cette commande va construire les conteneurs Docker et démarrer l'application en arrière-plan.
 
-Accédez à localhost/register pour accéder à la page d'inscription au compte.
+Accédez à `localhost/register` pour accéder à la page d'inscription au compte.
 
 # Testez le processus d'inscription :
 
