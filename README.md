@@ -10,7 +10,7 @@ git clone https://github.com/votre-nom/phase-1.git
 ```
 Importez le fichier SQL `base.sql` dans votre base de données MySQL docknet. Ce fichier contient la structure de la table users.
 
-Assurez-vous que votre environnement serveur respecte les exigences suivantes :
+## Assurez-vous que votre environnement serveur respecte les exigences suivantes :
 
 -PHP installé (version 7.0 ou supérieure recommandée)
 -MySQL installé
