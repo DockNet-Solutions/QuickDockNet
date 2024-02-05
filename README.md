@@ -6,17 +6,17 @@ Dans cette phase, nous renforçons les exigences de mot de passe, ajoutons la fo
 # Instructions
 Clonage du Référentiel :
 
-bash
-
+```bash
 git clone https://github.com/votre-nom/phase-3.git
+```
 
-voici la commande à exécuter pour démarrer l'application :
+Commande à exécuter pour démarrer l'application :
 
-bash
-
+```bash
 sudo docker-compose up -d --build
+```
 
-Assurez-vous d'avoir Docker Compose installé sur votre système. Cette commande va construire les conteneurs Docker et démarrer l'application en arrière-plan.
+Assurez-vous d'avoir `Docker Compose` installé sur votre système. Cette commande va construire les conteneurs Docker et démarrer l'application en arrière-plan.
 
 # Mise à Jour des Exigences de Mot de Passe :
 
