@@ -12,7 +12,7 @@ Importez le fichier SQL `base.sql` dans votre base de données MySQL docknet. Ce
 
 Assurez-vous que votre environnement serveur respecte les exigences suivantes :
 
-- PHP installé (version 7.0 ou supérieure recommandée)
+- PHP installé (version 7.0+)
 - MySQL installé
 - Extension PDO activée dans PHP
 
